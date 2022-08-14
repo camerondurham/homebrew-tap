@@ -10,16 +10,16 @@ class Ch < Formula
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/camerondurham/ch/releases/download/v0.3.6/ch_0.3.6_darwin_amd64.tar.gz"
-      sha256 "32896729427ed8137169bb182a7ab3b7604a8240095b6858fb2506e46a1c83ea"
+      url "https://github.com/camerondurham/ch/releases/download/v0.3.6/ch_0.3.6_darwin_amd64.zip"
+      sha256 "675137c85a383e7a4239575b85f7c0f9b5177b51f1b0ce888ab61e517beb5ec0"
 
       def install
         bin.install "ch"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/camerondurham/ch/releases/download/v0.3.6/ch_0.3.6_darwin_arm64.tar.gz"
-      sha256 "315943eae429b1d4c6facb5c01d2131dc041344b4304e6a1df6bdbde6e9b690b"
+      url "https://github.com/camerondurham/ch/releases/download/v0.3.6/ch_0.3.6_darwin_arm64.zip"
+      sha256 "a1709640d189511dd1ef75963949920957f55729409cc784a5981efd4852409b"
 
       def install
         bin.install "ch"
@@ -29,16 +29,16 @@ class Ch < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/camerondurham/ch/releases/download/v0.3.6/ch_0.3.6_linux_arm64.tar.gz"
-      sha256 "b05c8e6e9dbd98f7ce935bb525d62e1c179b32d53f1b39ce61a6273e6b8f3920"
+      url "https://github.com/camerondurham/ch/releases/download/v0.3.6/ch_0.3.6_linux_arm64.zip"
+      sha256 "4dfae3e5ff283001b08ad0336d8fe60e0a72372e1ebb4ce3d306084a44960fb0"
 
       def install
         bin.install "ch"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/camerondurham/ch/releases/download/v0.3.6/ch_0.3.6_linux_amd64.tar.gz"
-      sha256 "cb32d73b852aa352cadc19f06549f4f382b4dbd78558a3bddc386f293575591a"
+      url "https://github.com/camerondurham/ch/releases/download/v0.3.6/ch_0.3.6_linux_amd64.zip"
+      sha256 "d776daebf6a4f241663ac28615757f16b2f88daa91936db92c8e292fbb88a154"
 
       def install
         bin.install "ch"
