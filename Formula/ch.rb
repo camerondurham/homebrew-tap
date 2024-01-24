@@ -5,21 +5,21 @@
 class Ch < Formula
   desc "Docker config and shell manager for using (or misusing) containers as dev environments"
   homepage "https://github.com/camerondurham/ch"
-  version "0.3.6"
+  version "0.3.7"
   license "Apache-2.0"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/camerondurham/ch/releases/download/v0.3.6/ch-darwin-arm64.zip"
-      sha256 "2d4a759d7f2c4011bc949061d14a19ae8859d0e7e35542c84792fdd4aa0ca7a4"
+    if Hardware::CPU.intel?
+      url "https://github.com/camerondurham/ch/releases/download/v0.3.7/ch-darwin-amd64.zip"
+      sha256 "27e68a2ec772300e7f40d21e5a4e2b4d5d5df3e468d20ef775e9ec70412e58a8"
 
       def install
         bin.install "ch"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/camerondurham/ch/releases/download/v0.3.6/ch-darwin-amd64.zip"
-      sha256 "ed0bbc39ce3d5d575c9483dc53a9066cc9d28ab6d05abee5b022391c95a3455e"
+    if Hardware::CPU.arm?
+      url "https://github.com/camerondurham/ch/releases/download/v0.3.7/ch-darwin-arm64.zip"
+      sha256 "c5204f422cb9eecfb6af514feaa44e383fc60d3d063d98858daf7352710a14cf"
 
       def install
         bin.install "ch"
@@ -29,16 +29,16 @@ class Ch < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/camerondurham/ch/releases/download/v0.3.6/ch-linux-arm64.zip"
-      sha256 "a18c43ec7e75e3e6e5566aa852794cbb85f6c1a1934b77136cf07a0bb6523ef7"
+      url "https://github.com/camerondurham/ch/releases/download/v0.3.7/ch-linux-arm64.zip"
+      sha256 "3e06282e1ab1b47700ab79f9c795d034a2c82dfcc8d63da1d466643c33af603c"
 
       def install
         bin.install "ch"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/camerondurham/ch/releases/download/v0.3.6/ch-linux-amd64.zip"
-      sha256 "145840889a11c578fabe85f88bfd3f0e40757eb5835b07c1faa1364d63cc1f51"
+      url "https://github.com/camerondurham/ch/releases/download/v0.3.7/ch-linux-amd64.zip"
+      sha256 "3aa4f4cb50813216deed81c23f55af02c2c27ad71a2629bdbed5a9a26b254014"
 
       def install
         bin.install "ch"
